@@ -1,14 +1,15 @@
-1. Discuss your strategy and decisions implementing the application. Please, consider time complexity, effort cost, technologies used, and any other variable that you understand important in your development process.
+## 1. Strategy and Decisions for Implementing the Application
 
-The project seemed quite simple to me, so I decided to use the lightest framework I know in Python, Flask. I believe that some technologies, such as containerization using Docker, would be overkill for the purpose of this challenge, so I mainly used tools that were suitable for such a simple task.
+In developing this project, I aimed for simplicity and efficiency. I chose **Flask**, a lightweight Python framework, to build the application due to its minimal overhead and quick setup. Given the straightforward nature of the challenge, I avoided more complex solutions like containerization with Docker, as they would be overkill. Instead, I focused on selecting tools and technologies appropriate for the project's scope while considering factors such as time complexity and development effort.
 
-2. How would you change your solution to account for future columns that might be requested, such as “Bill Voted On Date” or “Co-Sponsors”?
+## 2. Adapting the Solution for Future Changes
 
-It would be quite simple. Basically, some models would need to be modified to accommodate the new fields, and the access methods would also be updated if necessary. If the solution were using a database, I would need to think about migrations and version control for the database.
+If future requirements included additional fields, such as **"Bill Voted On Date"** or **"Co-Sponsors"**, the solution would be easy to extend. I would update the models to incorporate the new fields and adjust any related access methods as necessary. If a database was involved, considerations for **database migrations and version control** would come into play to accommodate the changes seamlessly.
 
-3. How would you change your solution if instead of receiving CSVs of data, you were given a list of legislators or bills that you should generate a CSV for?
+## 3. Modifying the Solution for Different Input Formats
 
-It would be quite straightforward. The parsing method would need to be adjusted, and receiving any input file such as txt or even pdf would not significantly change the implementation; only different libraries would be used. To generate a CSV, it could be done manually using native Python or with the help of libraries.
+Switching the data source from CSVs to other formats, such as a list of legislators or bills, would also be straightforward. The **data parsing methods** would need to be adjusted to handle different input formats. For example, handling **text files or PDFs** would require using specific libraries, but the core implementation would remain largely the same. Generating a CSV output could be done manually using **native Python functionality** or with the help of specialized libraries.
 
-4. How long did you spend working on the assignment?
-About 3 hours
+## 4. Time Spent on the Assignment
+
+I spent approximately **3 hours** working on this assignment.
