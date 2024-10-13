@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block title %}Bills{% endblock %}
+{% block content %}
+
+    <div class="container", style="background-color: white">
+        <h2 class="mt-3 mb-3">Bills</h2>
+        <p>Bills: {{amount_of_bills}} available.</p>
+
+        {% for bill in bill_list %}
+            <a class="nav-link" href="{{ url_for('bill.bill', id=bill.id)}}">{{bill.title}}</a>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}

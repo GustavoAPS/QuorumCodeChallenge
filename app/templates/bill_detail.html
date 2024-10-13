@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block title %}Bill Detail{% endblock %}
+{% block content %}
+
+    <div class="container" style="background-color: white">
+        <h2 class="mt-3 mb-3">{{ bill.title }}</h2>
+
+        <p>Total votes: {{(supports + opositions)}}</p>
+        <p>Supported by {{supports}} legislators.</p>
+        <p>Opposed by {{opositions}} legislators.</p>
+
+        <h4 class="mt-3 mb-1">Bill Votes</h4>
+
+        <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Legislator</th>
+            <th scope="col">Vote</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        {% for view_model in view_models %}
+            <tr>
+            <td><a class="nav-link" href="{{ url_for('legislator.legislator', id=view_model.legislator_id)}}">{{view_model.legislator_name}}</a></td>
+            <td>
+                {% if view_model.vote_type == 1 %}
+                    <button class="btn btn-success btn-sm" disabled>yay</button>
+                {% else %}
+                    <button class="btn btn-danger btn-sm" disabled>nay</button>
+                {% endif %}
+            </td>
+            </tr>
+
+        {% endfor %}
+
+        </tbody>
+      </table>
+    </div>
+{% endblock %}
