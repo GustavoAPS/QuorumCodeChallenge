@@ -1,0 +1,37 @@
+# Ignore Python compiled files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environments
+venv/
+env/
+
+# Ignore .env files containing sensitive configuration
+# .env is this case there will be no sensitive config, so I am including 
+
+# Ignore IDE/editor configuration files
+.vscode/
+.idea/
+*.swp
+
+# Ignore bytecode files
+*.pyc
+
+# Ignore macOS-specific files
+.DS_Store
+
+# Ignore log files
+*.log
+
+# Ignore database files
+*.sqlite3
+instance/
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+.cache
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
